@@ -11,8 +11,7 @@ st.set_page_config(page_title="ForensicNet Deepfake Detector", layout="wide")
 
 st.title("🛡️ ForensicNet: Deepfake Detection System")
 st.markdown("### Analyzing Spatial Artifacts & Frequency Fingerprints")
-import os
-st.write("Files the server sees:", os.listdir("."))
+
 # --- SIDEBAR: Upload & Model Info ---
 with st.sidebar:
     st.header("Upload Center")
