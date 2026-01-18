@@ -1,8 +1,0 @@
-torch
-torchvision
-opencv-python-headless
-scipy
-scikit-learn
-facenet-pytorch
-matplotlib
-seaborn
