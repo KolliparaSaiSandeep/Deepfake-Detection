@@ -25,3 +25,5 @@ class ForensicNet(nn.Module):
 
     def forward(self, x_rgb, x_dct):
         return self.classifier(torch.cat((self.spatial(x_rgb), self.freq_stream(x_dct)), dim=1))
+
+

@@ -49,4 +49,4 @@ def visualize_dct(real_path, fake_path):
 
 if __name__ == "__main__":
     # Replace these with actual paths from your data folder
-    visualize_dct('data/train/real/id0_0000.mp4.jpg', 'data/train/fake/id0_id1_0000.mp4.jpg')
+    visualize_dct(r'C:\Users\u1196158\OneDrive - IQVIA\Documents\DeepfakeDetection\data\Train\fake\id0_id1_0000_face_163.jpg', r'C:\Users\u1196158\OneDrive - IQVIA\Documents\DeepfakeDetection\data\Train\real\00000_face_0.jpg')
