@@ -59,6 +59,7 @@ Exposing hidden mathematical residues that indicate synthetic upsampling.
 
 # Spectral Comparison: 
 Side-by-side evidence for real vs. synthesized frames for forensic verification.
+<img width="544" height="356" alt="image" src="https://github.com/user-attachments/assets/6b179d73-8773-4ef0-ad60-b9f66e3a3b8a" />
 
 
 # Total Latency: 
