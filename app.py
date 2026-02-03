@@ -54,14 +54,18 @@ if uploaded_file:
     input_tensor = torch.from_numpy(frame).permute(2, 0, 1).float().unsqueeze(0) / 255.0
     dct_tensor = get_dct_map(input_tensor)
 
-    # Display DCT Map
+
+    dct_tensor, dct_viz_image = get_dct_map(input_tensor)
+
     with col2:
         st.subheader("📉 Frequency Domain")
-        # Visualizing the first (and only) batch item
-        dct_viz = dct_tensor[0, 0].numpy()
-        st.image(dct_viz, use_container_width=True, clamp=True, caption="Spectral Artifacts")
-
-    # --- INFERENCE ---
+        # Use a heat map (COLORMAP_JET or COLORMAP_VIRIDIS) 
+        # This makes the "checkerboard" artifacts pop in bright colors
+        heatmap = cv2.applyColorMap(dct_viz_image[0], cv2.COLORMAP_JET)
+        st.image(heatmap, caption="Spectral Fingerprint (Log-Scaled)", use_container_width=True)
+        # --- INFERENCE ---
+    
+    
     st.divider()
     with torch.no_grad():
         prediction = model(input_tensor, dct_tensor).item()
