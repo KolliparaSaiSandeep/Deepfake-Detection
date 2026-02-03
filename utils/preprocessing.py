@@ -14,4 +14,6 @@ def get_dct_map(img_tensor):
 
 
 
+
+
     
